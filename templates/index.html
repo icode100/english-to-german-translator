@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English To German</title>
+  <style>
+    body {
+        height: 100vh;
+      background: linear-gradient( #0D0D0D,#e61818,#fff704);
+      font-family: sans-serif;
+    }
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .text-area {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .translation {
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="color: white;">Enter English Text</h2>
+    <form action="/translate" method="post">
+        <textarea class="text-area" name="text" placeholder="Enter your text here"></textarea>
+        <button>Translate</button> 
+        <div class="translation" >
+            {{ translated_text }}
+        </div> 
+  </div>
+    </form>
+</body>
+</html>
